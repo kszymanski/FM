@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="FarmMonitor.TabHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Margin="0" MouseEnter="OnMouseEnter" MouseLeave="OnMouseLeave" MouseDoubleClick="OnDoubleClick">
+    <DockPanel LastChildFill="True">
+        <Button Visibility="Hidden" Content="X" Height="10"  HorizontalAlignment="Right" Margin="0,3,4,0" 
+          x:Name="button_close" VerticalAlignment="Top" FontFamily="Courier" 
+          FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+          FontStretch="Normal" 
+          FontSize="9" Padding="0" ToolTip="Close" DockPanel.Dock="Right"/>
+        <Label Content="TabItem"  x:Name="label_TabTitle" VerticalAlignment="Top" 
+          FontFamily="Courier" FontSize="10" Visibility="Visible" />
+        <Grid x:Name="InputBox" Visibility="Collapsed" Height="23" DockPanel.Dock="Bottom">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <TextBox MinWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox" PreviewKeyDown="InputTextBox_PreviewKeyDown"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+
+</UserControl>

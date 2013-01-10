@@ -1,0 +1,29 @@
+﻿<Window x:Class="FarmMonitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+
+
+    <DockPanel LastChildFill="True">
+        <DockPanel Height="20" DockPanel.Dock="Bottom"/>
+        <TabControl x:Name="_myTabControl" >
+            <!-- Header -->
+            <TabControl.ItemTemplate  >
+                
+                <DataTemplate >
+                    <!-- Critic Name -->
+                    <ContentControl  Content="{Binding closableTabHeader}"/>
+                    <!--   <TextBlock Text="{Binding Name}" />-->
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <!-- Content -->
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                   <ContentControl Content="{Binding Grid}" />
+                    
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+    </DockPanel>
+   
+</Window>
